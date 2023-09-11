@@ -10,13 +10,15 @@ Before you begin, ensure you have the following prerequisites:
 Follow these steps to deploy MySQL in your Kubernetes cluster:
 
 1. Clone the Repository
-	git clone https://github.com/ashubambal/k8s-mysql-project.git
-	cd k8s-mysql-project
+	
+ 		git clone https://github.com/ashubambal/k8s-mysql-project.git
+		cd k8s-mysql-project
 
 2. Create a Namespace
-	kubectl create namespace mysql
+ 
+		kubectl create namespace mysql
 
-3. Create a ConfigMap for MySQL Configuration
+4. Create a ConfigMap for MySQL Configuration
    Edit mysql-configmap.yaml to define your MySQL configuration settings:
 
 		apiVersion: v1
@@ -28,9 +30,9 @@ Follow these steps to deploy MySQL in your Kubernetes cluster:
 
   	Apply the ConfigMap:
 
-  			kubectl apply -f mysql-configmap.yaml
+  		kubectl apply -f mysql-configmap.yaml
 
-4. Create a Secret for MySQL Root Password
+5. Create a Secret for MySQL Root Password
    Edit mysql-secret.yaml to set your MySQL root password:
 
 		apiVersion: v1
@@ -47,16 +49,16 @@ Follow these steps to deploy MySQL in your Kubernetes cluster:
 
   	Make sure to replace base64_encoded_password_here with the base64-encoded value of your MySQL root password.
 
-5. Deploy the MySQL Database
+6. Deploy the MySQL Database
    Apply the MySQL Deployment:
 
  		kubectl apply -f mysql-deployment.yaml
 
-6. Accessing MySQL
-   You can access the MySQL database from within the Kubernetes cluster using the MySQL client or by exposing it externally using a Service and LoadBalancer or 
+7. Accessing MySQL
+   You can access the MySQL database from within the Kubernetes cluster using the MySQL client or by exposing it 	externally using a Service and LoadBalancer or 
    NodePort, depending on your requirements.
 
-7. Cleaning Up
+8. Cleaning Up
    To delete the MySQL deployment and associated resources, run:
 
  		kubectl delete namespace mysql
