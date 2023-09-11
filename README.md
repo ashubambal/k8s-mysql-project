@@ -75,3 +75,4 @@ Follow these steps to deploy MySQL in your Kubernetes cluster:
    practices for security, data persistence, and scalability.
 
 ## Output
+![mysql-db](https://github.com/ashubambal/k8s-mysql-project/assets/92073828/e3401c14-fb1c-4647-98ac-681567ee02db)
