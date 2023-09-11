@@ -45,7 +45,7 @@ Follow these steps to deploy MySQL in your Kubernetes cluster:
 
 		kubectl apply -f mysql-secret.yaml
 
-  Make sure to replace base64_encoded_password_here with the base64-encoded value of your MySQL root password.
+  	Make sure to replace base64_encoded_password_here with the base64-encoded value of your MySQL root password.
 
 5. Deploy the MySQL Database
    Apply the MySQL Deployment:
