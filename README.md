@@ -10,7 +10,7 @@ Before you begin, ensure you have the following prerequisites:
 Follow these steps to deploy MySQL in your Kubernetes cluster:
 
 1. Clone the Repository
-	git clone https://github.com/your-username/k8s-mysql-project.git
+	git clone https://github.com/ashubambal/k8s-mysql-project.git
 	cd k8s-mysql-project
 
 2. Create a Namespace
@@ -26,9 +26,9 @@ Follow these steps to deploy MySQL in your Kubernetes cluster:
 		data:
 		  MYSQL_DATABASE: your_database_name
 
-  Apply the ConfigMap:
+  	Apply the ConfigMap:
 
-  		kubectl apply -f mysql-configmap.yaml
+  			kubectl apply -f mysql-configmap.yaml
 
 4. Create a Secret for MySQL Root Password
    Edit mysql-secret.yaml to set your MySQL root password:
