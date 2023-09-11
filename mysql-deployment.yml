@@ -32,3 +32,10 @@ spec:
               secretKeyRef:
                 name: my-secret
                 key: MYSQL_PASSWORD
+        volumeMounts:
+        - name: mysql-pv-volume
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: mysql-pv-volume
+        persistentVolumeClaim:
+          claimName: mysql-pv-claim 
