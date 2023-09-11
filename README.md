@@ -1,4 +1,4 @@
-Kubernetes MySQL Deployment (k8s-mysql-project)
+## Kubernetes MySQL Deployment (k8s-mysql-project)
 This repository contains Kubernetes manifests to deploy a MySQL database in a Kubernetes cluster. This example demonstrates how to set up a MySQL deployment with configuration values stored in ConfigMaps and sensitive data like passwords stored in Secrets.
 
 Prerequisites
