@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: to-do
+  namespace: django
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: to-do-label
+  template:
+    metadata:
+      labels:
+        app: to-do-label
+    spec:
+      containers:
+      - name: to-to-app
+        image: softconsist/todo-app:latest
+        ports:
+        - containerPort: 8000
